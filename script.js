@@ -25,4 +25,6 @@ window.promises = [
         },5000)
     })
 ]
-document.getElementById("output").innerHTML = Promise.any(promises)
+Promise.any(promises).then((result)=>{
+	document.getElementById("output").innerHTML = result;
+});
